@@ -1,0 +1,9 @@
+(.*)   - represents all characters (by ".") repeated as often as possible (by "*")
+(fa|te)rms   - matches "farms" and "terms"
+^www.+net$   - strings that beginns with "www" and ends with "net"
+^www\.[a-z0-9]+\.com$   - matches the "www.__.com" strings, the "__" can be any word that contains lowercase letters and numbers
+(^-\+[0-9]*)   - any number that starts with "-" or "+"
+\<tag\>(.*?)\<\/tag\>   - represents the content within <tag>...</tag>
+\<tag\>(.[^\<]+)   - The string from <tag> till the first "</"
+^([a-zA-Z0-9]+[a-zA-Z0-9._%-]*@([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,4})$   - Regular expression for email addresses
+^(http://|https://)?([^/]+)   - Regular expression for domain name of a URL
