@@ -1,0 +1,30 @@
+Type	Size	Description
+Storing text	The difference between "Text data types" consists in the maximum number of characters that can be stored in an individual field, the treatment of trailing spaces, and whether you can set a default value.
+CHAR(length)	length bytes	A fixed-length field from 0 to 255 characters long. Accepts a default value.
+VARCHAR(length)	length + 1 or 2 bytes	A variable-length field from 0 to 65,535 characters long. Accepts a default value.
+TINYTEXT	length + 1 bytes	A string with a maximum length of 255 characters
+TEXT	length + 2 bytes	A string with a maximum length of 65,535 characters. Cannot define a default value.
+MEDIUMTEXT	length + 3 bytes	A string with a maximum length of 16,777,215 characters
+LONGTEXT	length + 4 bytes	A string with a maximum length of 4,294,967,295 characters
+Storing numbers	These data types represents numbers in diferent formats.
+TINYINT(length)	1 byte	Range of –128 to 127. Or 0 to 255 unsigned
+SMALLINT(length)	2 bytes	Range of –32,768 to 32,767. Or 0 to 65,535 unsigned
+MEDIUMINT(length)	3 bytes	Range of –8,388,608 to 8,388,607. Or 0 to 16,777,215 unsigned
+INT(length)	4 bytes	Range of –2,147,483,648 to 2,147,483,647. If the column is declared as UNSIGNED, the range is from 0 to 4,294,967,295
+BIGINT(length)	8 bytes	Range of –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807. Or 0 to 18,446,744,073,709,551,615 unsigned
+FLOAT(length, decimals)	4 bytes	A small number with a floating decimal point. Since PHP will format numbers after calculation, They recommend that you use FLOAT without the optional parameters.
+DOUBLE(length, decimals)	8 bytes	A large number with a floating decimal point
+DECIMAL(length, decimals)	length + 1 or 2 bytes	A DOUBLE type, allowing for a fixed decimal point. Prior to MySQL 5.0.3, the DECIMAL data type was stored as a string, so could not be used with SQL functions, such as SUM()
+Storing dates and times	MySQL stores dates in one format only: YYYY-MM-DD
+DATE	3 bytes	A date stored as YYYY-MM-DD. The range is 1000-01-01 to 9999-12-31
+DATETIME	8 bytes	A combined date and time displayed in the format YYYY-MM-DD HH:MM:SS
+TIMESTAMP	4 bytes	A timestamp (normally generated automatically by the computer). Legal values range from the beginning of 1970 through January 2038. TIMESTAMP columns are displayed in the same format as DATETIME columns.
+TIME	3 bytes	In the format of HH:MM:SS
+Storing predefined lists	MySQL lets you store two types of predefined list that could be regarded as the database equivalents of radio button and check box states
+ENUM	1 or 2 bytes	This column type stores a single choice from a predefined list, each column can have one of several possible values
+SET	1, 2, 3, 4, or 8 bytes	This column type stores zero or more choices from a predefined list. Like ENUM except that each column can have more than one of several possible values. or more choices from a predefined list. The list can hold a maximum of 64 choices.
+Storing binary data	Storing binary data, such as images.
+TINYBLOB	 	Up to 255 bytes
+BLOB	 	Up to 64kB
+MEDIUMBLOB	 	Up to 16MB
+LONGBLOB	 	Up to 4GB
